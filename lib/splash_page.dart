@@ -6,7 +6,6 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🔹 Ambil ukuran layar
     final size = MediaQuery.of(context).size;
     final height = size.height;
     final width = size.width;
@@ -15,27 +14,25 @@ class SplashPage extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 118, 187, 212),
       body: SingleChildScrollView(
         child: SizedBox(
-          height: height, // biar pas 1 layar
+          height: height,
           width: width,
           child: Center(
             child: Padding(
-              padding: EdgeInsets.all(width * 0.08), // padding responsif
+              padding: EdgeInsets.all(width * 0.08),//PADDING RESPONSIF
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // 🔹 Logo responsif
+                  //LOGO SUDAH RESPONSIF
                   Image.asset(
                     "assets/images/logoo.png",
-                    height: height * 0.2, // 20% tinggi layar
+                    height: height * 0.2,
                   ),
                   SizedBox(height: height * 0.04),
-
-                  // 🔹 Teks sambutan
                   Text(
                     "Selamat Datang di Aplikasi Data Siswa",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: width * 0.06, // 6% lebar layar
+                      fontSize: width * 0.06,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
@@ -45,13 +42,11 @@ class SplashPage extends StatelessWidget {
                     "Kelola data siswa dengan lebih mudah dan cepat.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: width * 0.04, // 4% lebar layar
+                      fontSize: width * 0.04,
                       color: Colors.white70,
                     ),
                   ),
                   SizedBox(height: height * 0.08),
-
-                  // 🔹 Tombol Next responsif (full width)
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -60,7 +55,7 @@ class SplashPage extends StatelessWidget {
                         foregroundColor:
                             const Color.fromARGB(255, 118, 187, 212),
                         padding: EdgeInsets.symmetric(
-                          vertical: height * 0.02, // 2% tinggi layar
+                          vertical: height * 0.02,
                         ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -76,7 +71,7 @@ class SplashPage extends StatelessWidget {
                       child: Text(
                         "Next",
                         style: TextStyle(
-                          fontSize: width * 0.045, // 4.5% lebar layar
+                          fontSize: width * 0.045,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
